@@ -4,6 +4,7 @@
   "description": "",
   "main": "src/main.js",
   "scripts": {
+    "lint": "eslint --fix .",
     "start": "electron .",
     "build": "electron-builder",
     "build:win": "electron-builder --win",

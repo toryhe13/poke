@@ -1,5 +1,4 @@
 const utils = require("./utils");
-const {downloadLatestGameFiles} = require("./file_tab")
 const { ipcMain } = require('electron');
 
 const getTabData = () => {

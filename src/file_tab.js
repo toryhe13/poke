@@ -126,7 +126,7 @@ function downloadLatestGameFiles(parentWindow, modded) {
                     const zipUrl = zipAsset.browser_download_url;
                     const zipPath = path.join(app.getPath('temp'), 'game.zip');
 
-                    opts = {
+                    let opts = {
                         indeterminate: false,
                         text: 'Downloading game files...',
                         detail: 'Preparing to download...',
@@ -136,7 +136,7 @@ function downloadLatestGameFiles(parentWindow, modded) {
                         alwaysOnTop: true,
                     };
 
-                    if(parentWindow)
+                    if (parentWindow)
                         opts.parent = parentWindow
 
                     progressBar = new ProgressBar(opts);

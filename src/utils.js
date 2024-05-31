@@ -55,7 +55,7 @@ function createPopup(opts, content) {
 }
 
 function fetchCurrentAppVersionInfo() {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve, _reject) => {
         resolve(app.getVersion())
     });
 }
@@ -190,7 +190,7 @@ function loadSettings() {
             globals.mainWindow.setAutoHideMenuBar(globals.autoHideMenu);
             globals.mainWindow.setMenuBarVisibility(!globals.autoHideMenu);
         } catch (error) {
-            console.log("Error opening settings file.");
+            console.error(`Error ${error} opening settings file.`);
             useDefault = true;
         }
     }
