@@ -11,16 +11,18 @@ export default [
     },
     ignores: [
       ".config/*",
-      "node_modules/", 
+      "node_modules/",
+      "dist/",
     ],
     rules: {
       "no-unused-vars": ["error", {
-          "vars": "local",
-          "args": "after-used",
-          "caughtErrors": "all",
-          "argsIgnorePattern": "^_" ,
+          "indent": ["error", 4], // forces 4 spaces indent in the project
+          "vars": "local", // checks only that locally-declared variables are used but will allow global variables to be unused
+          "args": "all", // checks that all named arguments must be used.
+          "caughtErrors": "all", // checks that all named arguments in the error fn handler must be used.
+          "argsIgnorePattern": "^_" , // all the args starting with `_` are not checked
           "ignoreRestSiblings": false,
-          "reportUsedIgnorePattern": false
+          "reportUsedIgnorePattern": false // this option will report variables that match any of the valid ignore pattern options
       }]
   }
   },
