@@ -175,7 +175,7 @@ async function createWindow() {
                         });
                     }
                 })
-                .catch((error) => {
+                .catch(() => {
                     // Fallback for non-existing code
                     rpc.setActivity({
                         startTimestamp: startTime,
